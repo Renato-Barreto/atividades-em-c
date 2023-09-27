@@ -7,7 +7,7 @@ int main()
 {
     setlocale(LC_ALL, "portuguese");
 
-    // declarando variáveis
+    // declarando variÃ¡veis
     int valor;
 
     // solicitando dados
@@ -17,12 +17,15 @@ int main()
     // mostrar resultado
     if (valor == 10)
     {
-        printf("É igual a 10");
+        printf("Ã‰ igual a 10");
     }
-    if (valor > 10){
-        printf("É maior que 10");
-    } else {
-        printf("É menor que 10");
+    else if (valor > 10)
+    {
+        printf("Ã‰ maior que 10");
+    }
+    else
+    {
+        printf("Ã‰ menor que 10");
     }
 
     return 0;
@@ -30,6 +33,6 @@ int main()
 
 // <- VisualG
 // = Atribuir
-// == Comparação
+// == ComparaÃ§Ã£o
 // != Diferente
-// ! Não
+// ! NÃ£o
