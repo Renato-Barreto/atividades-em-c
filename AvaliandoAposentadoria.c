@@ -36,6 +36,7 @@ int main()
     } else {
         strcpy(resultado, "Não pode requerer aposentadoria");
     }
+	system("cls || clear");
     
     printf("Código de Cadastro do funcionário: %s \n", cadastro);
     printf("Idade do funcionário: %i \n", idade);
