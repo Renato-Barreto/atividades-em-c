@@ -16,7 +16,7 @@ int main()
     
     //avaliando
 
-    if (idade < 18 || idade > 65) {
+    if (idade < 18 && idade > 65) {
         printf("Tu não é obrigado a votar");
     } else {
         printf("Adiante seu lado e procura teu título");
