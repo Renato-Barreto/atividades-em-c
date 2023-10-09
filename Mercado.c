@@ -7,7 +7,7 @@ int main()
 {
     setlocale(LC_ALL, "portuguese");
 
-    // Definindo VÃ¡riaveis
+    // Definindo Váriaveis
     float valorDoProduto;
     float valorPorParcelas;
     float valorFinal;
@@ -15,7 +15,7 @@ int main()
     int quantidadeDeParcelas;
     char formaDePagamento;
 
-    // Solicitando dados do usuÃ¡rio
+    // Solicitando dados do usuário
 
     printf("Digite o valor do produto que deseja comprar:");
     scanf("%f", &valorDoProduto);
@@ -27,6 +27,14 @@ int main()
     printf("(P) - Parcelado \n");
     printf("Digite a forma de pagamento:\n");
     scanf("%c", &formaDePagamento);
+
+    //Adaptação de caractere
+    
+    if (formaDePagamento == 'v') {
+        formaDePagamento = 'V';
+    } else if (formaDePagamento == 'p') {
+        formaDePagamento = 'P';
+    }
 
     // Switch Case para forma de pagamento
 
