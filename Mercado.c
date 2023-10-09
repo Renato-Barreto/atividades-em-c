@@ -29,7 +29,7 @@ int main()
     scanf("%c", &formaDePagamento);
 
     //Adaptação de caractere
-    
+
     if (formaDePagamento == 'v') {
         formaDePagamento = 'V';
     } else if (formaDePagamento == 'p') {
@@ -51,11 +51,20 @@ int main()
         break;
 
     case 'P':
+        do
+        {
         printf("Digite a quantidade de parcelas:");
         scanf("%i", &quantidadeDeParcelas);
+        system("cls || clear");
 
-        if (quantidadeDeParcelas <= 6)
+        if (quantidadeDeParcelas > 6)
         {
+            printf("Limite de parcelas: 6x \n");
+            printf("Digite a quantidade de parcelas novamente... \n");
+        }
+        
+        } while (quantidadeDeParcelas > 6);
+
             valorPorParcelas = (valorDoProduto / quantidadeDeParcelas);
             valorFinal = valorDoProduto;
 
@@ -64,11 +73,6 @@ int main()
             printf("Quantidade de parcelas: %i \n", quantidadeDeParcelas);
             printf("Valor das parcelas: %.1f \n", valorPorParcelas);
             printf("Total a Pagar: %.1f", valorFinal);
-        }
-        else
-        {
-            printf("Número de parcelas excedido");
-        }
         break;
     default:
         printf("Forma de Pagamento Inválida");
