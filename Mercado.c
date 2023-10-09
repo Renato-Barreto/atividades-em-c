@@ -51,7 +51,7 @@ int main()
         break;
 
     case 'P':
-        do
+        do //Laço de repetição
         {
         printf("Digite a quantidade de parcelas:");
         scanf("%i", &quantidadeDeParcelas);
@@ -63,7 +63,7 @@ int main()
             printf("Digite a quantidade de parcelas novamente... \n");
         }
         
-        } while (quantidadeDeParcelas > 6);
+        } while (quantidadeDeParcelas > 6); //fim do laço de repetição
 
             valorPorParcelas = (valorDoProduto / quantidadeDeParcelas);
             valorFinal = valorDoProduto;
