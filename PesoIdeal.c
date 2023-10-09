@@ -2,18 +2,19 @@
 #include <stdlib.h>
 #include <locale.h>
 #include <string.h>
+#include <ctype.h>
 
 int main()
 {
     setlocale(LC_ALL, "portuguese");
 
-    //Definindo vari·veis
+    //Definindo vari√°veis
     char sexo [250];
     char sexoSigla;
     float altura;
     float pesoIdeal;
 
-    //Solicitando dados do usu·rio
+    //Solicitando dados do usu√°rio
 
     printf("(M) - Masculino \n");
     printf("(F) - Feminino \n");
@@ -24,11 +25,8 @@ int main()
     scanf("%f",&altura);
     system("cls ||clear");
 
-    if(sexoSigla == 'm'){
-        sexoSigla = 'M';
-    } else if (sexoSigla == 'f'){
-        sexoSigla = 'F';
-    }
+    //Convertendo em mai√∫sculo
+    sexoSigla = toupper (sexoSigla);
 
     switch (sexoSigla)
     {
@@ -43,12 +41,12 @@ int main()
         break;
 
     default:
-    printf("Sexo n„o reconhecido");
+    printf("Sexo n√£o reconhecido");
         break;
     }
 
-    printf("Seu sexo È: %s \n", sexo);
-    printf("Seu peso ideal È: %.2f", pesoIdeal);
+    printf("Seu sexo √©: %s \n", sexo);
+    printf("Seu peso ideal √©: %.2f", pesoIdeal);
     
 
 
