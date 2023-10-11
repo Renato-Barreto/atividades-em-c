@@ -16,14 +16,14 @@ int main()
     // Para i de 1 atÃ© 10 passo 1 faÃ§a
     for ( i = 1; i <= 5; i++)
     {
-    printf("Informe o %i° Número: ",i);
+    printf("Informe o %iÂ° NÃºmero: ",i);
     scanf("%i",&numero);
 
     soma = (soma + numero);
 
     }
 
-    printf("A soma dos números são: %i",soma);
+    printf("A soma dos nÃºmeros sÃ£o: %i",soma);
     
 
     return 0;
