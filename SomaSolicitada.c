@@ -18,9 +18,9 @@ int main()
     {
     printf("Informe o %i° Número: ",i);
     scanf("%i",&numero);
-
+    
+    //soma += numero;
     soma = (soma + numero);
-
     }
 
     printf("A soma dos números são: %i",soma);
