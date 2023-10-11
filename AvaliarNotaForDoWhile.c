@@ -18,22 +18,22 @@ for ( i = 1; i <= 2; i++)
 {
     do
     {
-    printf("Informe a %i∞ nota: ",i);
+    printf("Informe a %i¬∞ nota: ",i);
     scanf("%f", &notas);
 
     if (notas < 0 || notas > 10)
     {
-    printf("Nota inv·lida. \nDigite a nota novamente... \n\n");
+    printf("Nota inv√°lida. \nDigite a nota novamente... \n\n");
     }
     } while (notas < 0 || notas > 10);
 
     soma += notas;
+    media = soma / i;
     
 }
 
-media = soma / 2;
 
-printf("Sua mÈdia: %.2f ", media);
+printf("Sua m√©dia: %.2f ", media);
 
 
 
