@@ -8,36 +8,53 @@ int main()
 {
     setlocale(LC_ALL, "portuguese");
 
-    // Declarando Variáveis
-
+    // Declarando VariÃ¡veis
+    int codigo;
+    int idade;
+    int salario;
+    int somaSalarial;
+    float mediaSalarial;
+    char older [250];
+    char younger [250];
+    char sexo;
+  
     // Solicitando dados
 
-    printf("Código | Descrição \n");
-    printf("   1   | Adicionar Família \n");
+    printf("CÃ³digo | DescriÃ§Ã£o \n");
+    printf("   1   | Adicionar FamÃ­lia \n");
     printf("   2   | Sair e exibir resultados \n");
-    printf("Digite o código:");
+    printf("Digite o cÃ³digo:");
     scanf("%i", &codigo);
 
-    switch (expression)
+    switch (codigo)
     {
     case 1:
-        printf("Digite sua idade");
+        printf("Digite sua idade: ");
         scanf("%i", &idade);
 
-        printf("Digite seu sexo (M) Masculino ou (F) Feminino");
-        scanf("%c", &sexo);
-
-        printf("Digite seu último/atual salário:");
+        printf("Digite seu Ãºltimo/atual salÃ¡rio: ");
         scanf("%i", &salario);
+        
+        fflush(stdin);
+
+        printf("Digite seu sexo (M) Masculino ou (F) Feminino: ");
+        scanf("%c", &sexo);
+      
+        if (sexo == 'm'){
+          sexo = 'M';
+        }else if (sexo == 'f'){
+          sexo = 'F';
+        }
+
 
         somaSalarial += salario;
 
         break;
-    
+
     case 2:
-    printf("Média Salarial: %.2f", mediaSalarial);
-    printf("Pessoa mais velha: %s", older);
-    printf("Pessoa mais nova: %s", younger);
+    printf("MÃ©dia Salarial: %.2f \n", mediaSalarial);
+    printf("Pessoa mais velha: %s \n", older);
+    printf("Pessoa mais nova: %s \n", younger);
 
 
 
