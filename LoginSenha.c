@@ -8,7 +8,7 @@ int main()
 {
     setlocale(LC_ALL, "portuguese");
 
-    // Declarando Var·veis
+    // Declarando Var√°veis
     char loginSalvo[250] = "RenatoBarreto";
     char login[250];
     char senhaSalva[250] = "XaolinPeixaria";
@@ -18,7 +18,7 @@ int main()
 
     do{
     printf("Bem-Vindo ao SENAI ADS\n");
-    printf("Iniciaremos com a solicitaÁ„o dos dados do login\n");
+    printf("Iniciaremos com a solicita√ß√£o dos dados do login\n");
     printf("\n");
     printf("Digite o login:");
     gets(login);
@@ -41,7 +41,7 @@ int main()
     }
     
     
-    } while (strcmp(login, loginSalvo) != 0 && strcmp(senha, senhaSalva) != 0);
+    } while (strcmp(login, loginSalvo) != 0 || strcmp(senha, senhaSalva) != 0);
 
     return 0;
 }
