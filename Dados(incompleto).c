@@ -8,7 +8,7 @@ int main()
 {
     setlocale(LC_ALL, "portuguese");
 
-    // Declarando VariÃ¡veis
+    // Declarando Variáveis
     int i = 0;
     int codigo;
     int idade;
