@@ -8,23 +8,28 @@ int main()
 {
     setlocale(LC_ALL, "portuguese");
 
-    // Declarando Variáveis
+    // Declarando VariÃ¡veis
+    int i = 0;
     int codigo;
     int idade;
     int salario;
-    int somaSalarial;
+    int somaSalarial = 0;
+    int older = 0;
+    int younger = 0;
+    int mulheresSalario = 0;
     float mediaSalarial;
-    char older [250];
-    char younger [250];
     char sexo;
   
-    // Solicitando dados
+    // Solicitando Código
 
+    do{
     printf("Código | Descrição \n");
     printf("   1   | Adicionar Família \n");
     printf("   2   | Sair e exibir resultados \n");
     printf("Digite o código:");
     scanf("%i", &codigo);
+
+    // Solicitando Dados
 
     switch (codigo)
     {
@@ -32,35 +37,46 @@ int main()
         printf("Digite sua idade: ");
         scanf("%i", &idade);
 
-        printf("Digite seu último/atual salário: ");
+        printf("Digite seu Útimo/atual salário: ");
         scanf("%i", &salario);
         
         fflush(stdin);
 
         printf("Digite seu sexo (M) Masculino ou (F) Feminino: ");
         scanf("%c", &sexo);
-      
-        if (sexo == 'm'){
-          sexo = 'M';
-        }else if (sexo == 'f'){
-          sexo = 'F';
-        }
+        sexo = toupper (sexo);
 
+        system("cls||clear");
 
+        if (sexo = 'F' && salario >= 5.000 ){
+        mulheresSalario++;
+      }
+
+       if (i != -1)
+      {
+        older = idade;
+        younger = idade;
+        
+        older = older > younger ? older : younger;
+        younger = older < younger ? older : younger;
+        
+        i++;
+      }
         somaSalarial += salario;
+        mediaSalarial = somaSalarial / i;
 
         break;
 
     case 2:
     printf("Média Salarial: %.2f \n", mediaSalarial);
-    printf("Pessoa mais velha: %s \n", older);
-    printf("Pessoa mais nova: %s \n", younger);
-
-
+    printf("Pessoa mais velha: %i \n", older);
+    printf("Pessoa mais nova: %i \n", younger);
+    printf("Numero de Mulheres com salário acima de 5.000 R$: %i", mulheresSalario);
 
         default:
         break;
     }
+    } while (codigo != 2);
 
     return 0;
 }
