@@ -12,7 +12,7 @@ int main () {
     int tamanho = 5;
     int numero[tamanho];
     int maior = 0;
-    int menor = 0;
+    int menor = 9999;
 
     //Solicitando dados
     printf("Digite os valores inteiros \n");
@@ -22,8 +22,8 @@ int main () {
     scanf("%i", &numero[i]); 
 
     //Calculando
-    maior = numero[0] > numero[i] ? numero[0] : numero[i];
-    menor = numero[0] < numero[i] ? numero[0] : numero[i];
+    maior = numero[i] > maior ? numero[i] : maior;
+    menor = numero[i] < menor ? numero[i] : menor;
     }   
 
     //Mostrando Dados
