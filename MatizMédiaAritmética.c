@@ -37,7 +37,7 @@ int main () {
     
     for ( i = 0; i < coluna; i++)
     {
-        media[i] = soma[i] / 3;
+        media[i] = soma[i] / linha;
     }
 
     system("cls || clear");
@@ -49,7 +49,7 @@ int main () {
     }
     sleep(2);
     system("cls || clear");
-    
+
         
     printf("_____________________\n");
     for ( i = 0; i < coluna; i++)
@@ -64,5 +64,6 @@ int main () {
         printf("\nMédia: %.2f \n", media[i]);
         printf("_____________________\n");
     }
+
     return 0;
 }
