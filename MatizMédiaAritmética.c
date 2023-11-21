@@ -13,8 +13,8 @@ int main () {
     int coluna = 4;
     char aluno [coluna] [250];
     float notas [linha][coluna];
-    float soma [coluna];
     float media [coluna];
+    float soma = 0;
     int i,j;
 
     //Solicitando Dados
@@ -28,18 +28,15 @@ int main () {
             printf("Digite a %iº nota do aluno: ", j + 1);
             scanf("%f",&notas[i][j]);
 
-            soma[i] += notas[i][j];
+            soma += notas[i][j];
     
         }
+        media[i] = soma / linha;
+        soma = 0;
         fflush(stdin);
         printf("\n");
     }
     
-    for ( i = 0; i < coluna; i++)
-    {
-        media[i] = soma[i] / linha;
-    }
-
     system("cls || clear");
     printf("Calculando Média aritmética");
     for ( i = 0; i < 3; i++)
@@ -50,7 +47,7 @@ int main () {
     sleep(2);
     system("cls || clear");
 
-        
+
     printf("_____________________\n");
     for ( i = 0; i < coluna; i++)
     {
@@ -64,6 +61,5 @@ int main () {
         printf("\nMédia: %.2f \n", media[i]);
         printf("_____________________\n");
     }
-
     return 0;
 }
