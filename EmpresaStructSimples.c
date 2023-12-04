@@ -4,34 +4,26 @@
 #include <string.h>
 #include <time.h>
 
-//Declarando Struct e suas vari·veis
-struct dados_funcionarios
+//Declarando Struct e suas vari√°veis
+struct dados_pessoa
 {
     char nome[200];
     int idade;
     char cpf[200];
 };
-
-struct dados_clientes
-{
-    char nome[200];
-    int idade;
-    char cpf[200];
-};
-
 
 int main()
 {
     setlocale(LC_ALL, "portuguese");
 
-    //Declarando Vari·veis
-    struct dados_funcionarios funcionarios;
-    struct dados_clientes clientes;
+    //Declarando Vari√°veis
+    struct dados_pessoa funcionarios;
+    struct dados_pessoa clientes;
     char resposta;
 
     //Solicitando Dados
 
-    printf("VocÍ È clientes(C) ou funcion·rio(F)?\n");
+    printf("Voc√™ √© clientes(C) ou funcion√°rio(F)?\n");
     printf("Digite 'C' ou 'F': ");
     scanf("%c",&resposta);
 
@@ -76,7 +68,7 @@ int main()
 
         system("cls || clear");
 
-        printf("Funcion·rio\n");
+        printf("Funcion√°rio\n");
         printf("Seu Nome: %s\n",funcionarios.nome);
         printf("Sua Idade: %i\n",funcionarios.idade);
         printf("Seu CPF: %s",funcionarios.cpf);
@@ -86,10 +78,5 @@ int main()
         break;
     }
 
-
-
-
-
     return 0;
 }
-    
