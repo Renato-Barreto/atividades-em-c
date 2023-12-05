@@ -4,6 +4,7 @@
 #include <string.h>
 #include <ctype.h>
 
+//Declarando Função
 void tabuada (int n1)
 {
     int a;
@@ -12,17 +13,19 @@ void tabuada (int n1)
         printf("%i x %i = %i \n", n1, a, a * n1);
     }
 }
-
+//Função Principal
 int main()
 {
     setlocale(LC_ALL, "portuguese");
 
+    //Declarando Variáveis
     int numero;
 
-    printf("Digite o n�mero para a tabuada:");
+    //Solicitando Dados
+    printf("Digite o número para a tabuada:");
     scanf("%i", &numero);
     
-    // Para i de 1 at� 10 passo 1 fa�a
+    //Mostrando para o usuário
     tabuada(numero);
     
 
